@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil - Linn Olsen</title>
+  <style>
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #fff;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    header nav a {
+      margin-right: 25px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    header button {
+      background-color: #34b7eb;
+      border: none;
+      color: #fff;
+      padding: 8px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 30px;
+    }
+
+    .profile-card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .profile-header {
+      background-color: #2bb8da;
+      height: 80px;
+    }
+
+    .profile-content {
+      padding: 20px;
+      position: relative;
+      top: -40px;
+    }
+
+    .profile-content img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      position: relative;
+      top: -45px;
+      object-fit: cover;
+    }
+
+    .profile-content h2 {
+      margin: -20px 0 5px 0;
+      font-size: 1.5rem;
+    }
+
+    .profile-content p {
+      margin: 5px 0;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .edit-profile {
+      color: #2bb8da;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+
+    .section {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+      margin-top: 20px;
+    }
+
+    .section h3 {
+      margin-top: 0;
+      font-size: 1.1rem;
+    }
+
+    .connection-requests, .connections {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+
+    .connection-requests h3, .connections h3 {
+      margin-top: 0;
+    }
+
+    .request, .connection {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .request img, .connection img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+      object-fit: cover;
+    }
+
+    .request-info, .connection-info {
+      display: flex;
+      align-items: center;
+    }
+
+    .request-buttons button {
+      background: none;
+      border: 1px solid #ccc;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      margin-left: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .request-buttons button:hover {
+      background-color: #e9f7fc;
+    }
+
+    .connections small {
+      color: #777;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#">Mi Perfil</a>
+      <a href="#">Encontrar Conexiones</a>
+    </nav>
+    <button>Cerrar Sesión</button>
+  </header>
+
+  <main>
+    <!-- Perfil principal -->
+    <div>
+      <div class="profile-card">
+        <div class="profile-header"></div>
+        <div class="profile-content">
+          <img src="https://thvnext.bing.com/th/id/OIP.pSgdbENsnuRbE7Uv6BwccgHaFj?w=217&h=180&c=7&r=0&o=7&cb=12&dpr=1.3&pid=1.7&rm=3&ucfimg=1" alt="Foto de perfil de gato">
+          <h2>Linn Olsen</h2>
+          <p><strong>Bergen, Noruega</strong><br>
+          Diseñadora de UX/UI | Desarrolladora Frontend | Amante de la naturaleza</p>
+          <p>Apasionada por crear experiencias digitales hermosas y funcionales. Cuando no está codificando, disfruta explorando los fiordos noruegos y capturando la belleza de la naturaleza en fotografías.</p>
+          <a href="#" class="edit-profile">✏️ Editar perfil</a>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Educación</h3>
+        <p><strong>Coding Dojo - Bootcamp de Desarrollo Full Stack</strong><br>
+        Dic 2019 – Mar 2020<br>
+        Triple cinturón negro en Python, MERN y C#</p>
+      </div>
+    </div>
+
+    <!-- Conexiones -->
+    <aside>
+      <div class="connection-requests">
+        <h3>Solicitudes de Conexión (2)</h3>
+
+        <div class="request">
+          <div class="request-info">
+            <img src="https://thvnext.bing.com/th/id/OIP.CnSwKQMTmk0TozvHWmRdeQHaE8?w=246&h=180&c=7&r=0&o=7&cb=12&dpr=1.3&pid=1.7&rm=3&ucfimg=1" alt="Gato 1">
+            <span>Kai Schröder</span>
+          </div>
+          <div class="request-buttons">
+            <button>✔</button>
+            <button>✖</button>
+          </div>
+        </div>
+
+        <div class="request">
+          <div class="request-info">
+            <img src="https://thvnext.bing.com/th/id/OIP.hltIvz2rR9cXF9xpfQhz1gHaE4?w=248&h=180&c=7&r=0&o=7&cb=12&dpr=1.3&pid=1.7&rm=3&ucfimg=1" alt="Gato 2">
+            <span>Amira El-Masry</span>
+          </div>
+          <div class="request-buttons">
+            <button>✔</button>
+            <button>✖</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="connections" style="margin-top: 20px;">
+        <h3>Tus Conexiones (500+)</h3>
+
+        <div class="connection">
+          <div class="connection-info">
+            <img src="https://thvnext.bing.com/th/id/OIP.-sYgWw8Pdh-gxC3dx5v5hQHaEK?w=256&h=180&c=7&r=0&o=7&cb=12&dpr=1.3&pid=1.7&rm=3&ucfimg=1" alt="Gato 3">
+            <span>Adrien Desplatz</span>
+          </div>
+        </div>
+
+        <div class="connection">
+          <div class="connection-info">
+            <img src="https://thvnext.bing.com/th/id/OIP.AcsRHLiQ3tmlJA-BsdU7dwHaE7?w=246&h=180&c=7&r=0&o=7&cb=12&dpr=1.3&pid=1.7&rm=3&ucfimg=1" alt="Gato 4">
+            <span>Aarav Patel</span>
+          </div>
+        </div>
+
+        <div class="connection">
+          <div class="connection-info">
+            <img src="https://thvnext.bing.com/th/id/OIP.n0BejYQoS7qa2IyIRSJfGwHaFB?w=291&h=197&c=7&r=0&o=7&cb=12&dpr=1.3&pid=1.7&rm=3&ucfimg=1" alt="Gato 5">
+            <span>Lina Kovačević</span>
+          </div>
+        </div>
+
+        <div class="connection">
+          <div class="connection-info">
+            <img src="https://thvnext.bing.com/th/id/OIP.R6MALnNUVRQRL-hhOMnocQHaEK?w=319&h=180&c=7&r=0&o=7&cb=12&dpr=1.3&pid=1.7&rm=3&ucfimg=1" alt="Gato 6">
+            <span>Mateo Hernández</span>
+          </div>
+        </div>
+
+        <div class="connection">
+          <div class="connection-info">
+            <img src="https://thvnext.bing.com/th/id/OIP.OybonWmgU82HngWBEjMCfAHaEt?w=277&h=180&c=7&r=0&o=7&cb=12&dpr=1.3&pid=1.7&rm=3&ucfimg=1" alt="Gato 7">
+            <span>Yuna Kim</span>
+          </div>
+        </div>
+
+        <div class="connection">
+          <div class="connection-info">
+            <img src="https://thvnext.bing.com/th/id/OIP.d-XYjwfZQXfCTryPko7fXQHaFj?w=233&h=185&c=7&r=0&o=7&cb=12&dpr=1.3&pid=1.7&rm=3&ucfimg=1" alt="Gato 8">
+            <span>Liam O'Brien</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </main>
+</body>
+</html>
